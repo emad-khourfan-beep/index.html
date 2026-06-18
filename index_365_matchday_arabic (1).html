@@ -350,7 +350,7 @@ function countdownText(match){
 
 async function loadMatchdays(){
   try{
-    const response = await fetch(GOOGLE_SCRIPT_URL + "?action=matchdays&v=" + Date.now());
+    const response = await fetch(https://script.google.com/macros/s/AKfycbymFV1IOihICbNAu5STmuZg9FsDO5UkZ805ndgLO3-4EgdbDoBb0aTNykr6R2r_ClWEzg/exec + "?action=matchdays&v=" + Date.now());
     matchdays = await response.json();
     renderMatchdayBar();
   }catch(e){
@@ -382,7 +382,7 @@ async function loadMatches(){
   box.innerHTML = "جاري تحميل المباريات...";
 
   try{
-    const response = await fetch(GOOGLE_SCRIPT_URL + "?v=" + Date.now());
+    const response = await fetch(https://script.google.com/macros/s/AKfycbymFV1IOihICbNAu5STmuZg9FsDO5UkZ805ndgLO3-4EgdbDoBb0aTNykr6R2r_ClWEzg/exec + "?v=" + Date.now());
     matches = await response.json();
     renderMatches();
     renderMatchdayBar();
@@ -498,7 +498,7 @@ document.getElementById("predictionForm").addEventListener("submit", async funct
   submitBtn.textContent = "جاري الإرسال...";
 
   try{
-    await fetch(GOOGLE_SCRIPT_URL, {
+    await fetch(https://script.google.com/macros/s/AKfycbymFV1IOihICbNAu5STmuZg9FsDO5UkZ805ndgLO3-4EgdbDoBb0aTNykr6R2r_ClWEzg/exec, {
       method:"POST",
       mode:"no-cors",
       body:JSON.stringify({playerName, whatsapp, predictions})
@@ -524,7 +524,7 @@ document.getElementById("predictionForm").addEventListener("submit", async funct
 
 async function loadLeaderboard(){
   try{
-    const response = await fetch(GOOGLE_SCRIPT_URL + "?action=leaderboard&v=" + Date.now());
+    const response = await fetch(https://script.google.com/macros/s/AKfycbymFV1IOihICbNAu5STmuZg9FsDO5UkZ805ndgLO3-4EgdbDoBb0aTNykr6R2r_ClWEzg/exec + "?action=leaderboard&v=" + Date.now());
     const data = await response.json();
     const body = document.getElementById("leaderboardBody");
     body.innerHTML = "";
@@ -549,7 +549,7 @@ async function loadLeaderboard(){
 
 async function loadResults(){
   try{
-    const response = await fetch(GOOGLE_SCRIPT_URL + "?action=results&v=" + Date.now());
+    const response = await fetch(https://script.google.com/macros/s/AKfycbymFV1IOihICbNAu5STmuZg9FsDO5UkZ805ndgLO3-4EgdbDoBb0aTNykr6R2r_ClWEzg/exec + "?action=results&v=" + Date.now());
     const data = await response.json();
     const body = document.getElementById("resultsBody");
     body.innerHTML = "";
@@ -573,7 +573,7 @@ async function loadResults(){
 
 async function loadPredictions(){
   try{
-    const response = await fetch(GOOGLE_SCRIPT_URL + "?action=predictions&v=" + Date.now());
+    const response = await fetch(https://script.google.com/macros/s/AKfycbymFV1IOihICbNAu5STmuZg9FsDO5UkZ805ndgLO3-4EgdbDoBb0aTNykr6R2r_ClWEzg/exec + "?action=predictions&v=" + Date.now());
     const data = await response.json();
     const body = document.getElementById("predictionsBody");
     body.innerHTML = "";
@@ -600,7 +600,7 @@ async function loadPredictions(){
 
 async function loadStats(){
   try{
-    const response = await fetch(GOOGLE_SCRIPT_URL + "?action=stats&v=" + Date.now());
+    const response = await fetch(https://script.google.com/macros/s/AKfycbymFV1IOihICbNAu5STmuZg9FsDO5UkZ805ndgLO3-4EgdbDoBb0aTNykr6R2r_ClWEzg/exec + "?action=stats&v=" + Date.now());
     const data = await response.json();
     document.getElementById("playersCount").textContent = data.playersCount || 0;
     document.getElementById("predictionsCount").textContent = data.predictionsCount || 0;
