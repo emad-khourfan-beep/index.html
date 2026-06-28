@@ -140,7 +140,7 @@ th{background:var(--gold);color:#06142e}
 <div id="toast" class="toast"></div>
 
 <script>
-const GOOGLE_SCRIPT_URL = "PUT_YOUR_WEB_APP_URL_HERE";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzqMb4D1XPrWO6egLnEpkpHT6EW2B608XVnPD-qCtvJmYhvgu04q7b1ItwdNMrkejfBsw/exec";
 
 let matches = [];
 let matchdays = [];
